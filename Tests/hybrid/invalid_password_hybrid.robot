@@ -1,13 +1,8 @@
 *** Settings ***
-Library     ../../Libraries/YamlReader.py
-Resource    ../../Resources/BrowserFactory.robot
+Resource    ../../Resources/TestSetup.robot
 Resource    ../../Pages/LoginPage.robot
 
 Test Teardown    Close Browser Session
-
-*** Variables ***
-${ENV_FILE}        Config/env.yaml
-${UI_DATA_FILE}    TestData/ui_data.yaml
 
 *** Test Cases ***
 Invalid Password Hybrid
@@ -16,10 +11,9 @@ Invalid Password Hybrid
 	...    sanity
 	...    regression
 
-	${env}=    Load Yaml    ${ENV_FILE}
-	${ui_data}=    Load Yaml    ${UI_DATA_FILE}
+	${env}    ${ui_data}=    Initialize UI Test Context
 
-	Launch Browser    ${env}[application][ui_url]
+	Launch Application From Config    ${env}
 
 	Login To SauceDemo
 	...    ${ui_data}[users][invalid_password][username]

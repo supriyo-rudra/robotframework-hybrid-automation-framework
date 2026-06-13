@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+
+  robot-framework:
+
+    build: .
+
+    environment:
+
+      - ENV=qa
+
+    container_name: robot-framework
+
+    volumes:
+
+      - ./Results:/app/Results
+
+    command:
+
+      - robot
+
+      - -d
+
+      - Results
+
+      - Tests/api

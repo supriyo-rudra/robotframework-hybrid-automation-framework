@@ -1,6 +1,11 @@
 Results/
 allure-results/
 allure-report/
+log.html
+report.html
+output.xml
+Logs/
+Screenshots/
 
 __pycache__/
 *.pyc

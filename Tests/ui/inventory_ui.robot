@@ -9,7 +9,7 @@ Suite Teardown    Close Browser Session
 *** Test Cases ***
 Inventory Page Validation
 
-    [Tags]    regression
+    [Tags]    sanity    regression
 
     Enter Username    standard_user
 

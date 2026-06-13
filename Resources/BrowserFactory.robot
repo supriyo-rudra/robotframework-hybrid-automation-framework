@@ -13,6 +13,9 @@ Launch Browser
 
     Maximize Browser Window
 
+    Register Keyword To Run On Failure
+    ...    Capture Page Screenshot
+
 Close Browser Session
 
     Close All Browsers

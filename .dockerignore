@@ -1,0 +1,7 @@
+.venv
+.git
+.idea
+Results
+Screenshots
+__pycache__
+*.pyc
