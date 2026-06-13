@@ -8,12 +8,17 @@ ${API_KEY}     free_user_3F5IcYN7thV2ymEch3SEjEd77lU
 *** Keywords ***
 Create API Session
 
-    ${headers}=    Create Dictionary
-    ...    x-api-key=${API_KEY}
+    [Arguments]
+    ...    ${base_url}=${BASE_URL}
+    ...    ${api_key}=${API_KEY}
+
+    ${headers}=
+    ...    Create Dictionary
+    ...    x-api-key=${api_key}
 
     Create Session
     ...    reqres
-    ...    ${BASE_URL}
+    ...    ${base_url}
     ...    headers=${headers}
 
 Login API

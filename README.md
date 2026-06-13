@@ -21,3 +21,29 @@ API:
 - Pabot Parallel Execution
 - Jenkins CI/CD
 - Allure Reporting
+
+## Run Commands
+
+### Smoke
+
+```bash
+robot -i smoke Tests
+```
+
+### Sanity
+
+```bash
+robot -i sanity Tests
+```
+
+### Regression
+
+```bash
+robot -i regression Tests
+```
+
+### Full Suite
+
+```bash
+robot Tests
+```

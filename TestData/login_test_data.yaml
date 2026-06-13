@@ -1,0 +1,16 @@
+login_tests:
+  - username: standard_user
+    password: secret_sauce
+    expected: PASS
+
+  - username: standard_user
+    password: wrong_password
+    expected: FAIL
+
+  - username: wrong_user
+    password: secret_sauce
+    expected: FAIL
+
+  - username: locked_out_user
+    password: secret_sauce
+    expected: FAIL

@@ -1,0 +1,15 @@
+employees:
+  - name: Rahul Sharma
+    job: QA Engineer
+
+  - name: Priya Banerjee
+    job: Automation Engineer
+
+  - name: Amit Kumar
+    job: SDET
+
+  - name: Sneha Verma
+    job: Test Lead
+
+  - name: Arjun Singh
+    job: QA Manager

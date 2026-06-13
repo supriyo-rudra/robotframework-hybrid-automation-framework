@@ -16,6 +16,25 @@ Get User
 
 	RETURN    ${response}
 
+Create Employee
+
+	[Arguments]
+	...    ${name}
+	...    ${job}
+
+	${body}=
+	...    Create Dictionary
+	...    name=${name}
+	...    job=${job}
+
+	${response}=
+	...    POST On Session
+	...    reqres
+	...    /api/users
+	...    json=${body}
+
+	RETURN    ${response}
+
 Get Users List Page
 
 	${data}=    Load API Test Data

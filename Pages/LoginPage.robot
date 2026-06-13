@@ -17,3 +17,21 @@ Enter Password
 
 Click Login
     Click Button    ${LOGIN_BUTTON}
+
+Login To SauceDemo
+    [Arguments]
+    ...    ${username}
+    ...    ${password}
+
+    Input Text    ${USERNAME_FIELD}    ${username}
+    Input Text    ${PASSWORD_FIELD}    ${password}
+
+    Click Button    ${LOGIN_BUTTON}
+
+Verify Login Error
+    [Arguments]
+    ...    ${expected_message}
+
+    Element Should Contain
+    ...    css:[data-test="error"]
+    ...    ${expected_message}

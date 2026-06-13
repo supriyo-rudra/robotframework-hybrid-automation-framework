@@ -7,7 +7,9 @@ ${URL}    https://www.saucedemo.com
 *** Keywords ***
 Launch Browser
 
-    Open Browser    ${URL}    chrome
+    [Arguments]    ${url}=${URL}
+
+    Open Browser    ${url}    chrome
 
     Maximize Browser Window
 
